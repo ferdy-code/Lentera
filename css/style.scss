@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+p {
+    font-size: 14px;
+    color: #999999;
+}
+
+.nav-link {
+    font-size: 18px;
+    color: #999999 !important;
+    &.active {
+        color: #000000 !important;
+        font-weight: 600;
+    }
+}
+
+.main-page {
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    h1 {
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    .text-location {
+        border: none;
+        width: 100%;
+        height: 50px;
+        padding-left: 14px;
+        background: #f7f7f9;
+        color: black;
+        font-size: 18px;
+    }
+
+    .btn-explore {
+        width: 170px;
+        height: 50px;
+        border-radius: 0;
+        background: #ff9376;
+        color: white;
+        margin-top: 20px;
+        position: relative;
+        z-index: 10;
+        &::after {
+            content: "";
+            width: 146px;
+            height: 50px;
+            top: 11px;
+            left: 12px;
+            z-index: -1;
+            position: absolute;
+            background: #ff9376;
+            opacity: 0.3;
+            filter: blur(20px);
+            border-radius: 4px;
+        }
+    }
+}
+
+.img-hero {
+    display: none;
+}
+
+.partner {
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+.top {
+    margin-top: 70px;
+    h3 {
+        font-size: 36px;
+        font-weight: 600;
+    }
+
+    .sub-text {
+        font-size: 18px;
+    }
+
+    .card {
+        border: none;
+        img {
+            border-radius: 42px;
+        }
+
+        .label {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            right: 0;
+            width: 110px;
+            height: 50px;
+            background-color: #8080ff;
+            border-radius: 0 70px 0 80px;
+        }
+
+        .card-body {
+            padding: 0;
+            margin-top: 20px;
+        }
+    }
+
+    .row {
+        .img-item {
+            border-radius: 42px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.community {
+    margin-top: 100px;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 880px;
+        height: 450px;
+        border-radius: 0 48px 0 0 ;
+        background-color: #f6f8fc;
+        z-index: -1;
+    }
+    h3 {
+        font-size: 36px;
+        font-weight: 600;
+    }
+}
+
+// TAB SIZE
+@media (min-width: 768px) { 
+    p {
+        font-size: 16px;
+    }
+
+    .nav-link {
+        margin-left: 2rem;
+    }
+
+    .main-page {
+        margin-top: 0;
+        margin-left: -15px;
+        margin-right: -15px;
+
+        h1 {
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 13px;
+        }
+    }
+
+    .img-hero {
+        display: block;
+        width: 100%;
+        &::before {
+            content: "";
+            position: absolute;
+            width: auto;
+            height: 50%;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #8080ff;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .main-page {
+        h1 {
+            font-size: 36px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    }
+
+    .partner {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+}
+
+@media (min-width: 1200px) { 
+    .main-page {
+        h1 {
+            font-size: 42px;
+        }
+    }
+
+    .img-hero::before {
+        height: 70%;
+    }
+}
